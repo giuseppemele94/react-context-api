@@ -5,11 +5,14 @@ import DefaultLayout from "./layouts/DefaultLayout"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import ProductsDetail from "./pages/ProductsDetail"
 import NotFoundPage from "./pages/NotFoundPage"
+import { BudgetProvider } from "./contexts/BudgetContext"
+
 
 function App() {
 
 
   return (
+    <BudgetProvider>
     <BrowserRouter>
       <Routes>
         {/** in default layout ci sono tutte le pagine che devono condividere lo stesso layout  */}
@@ -25,6 +28,7 @@ function App() {
       </Routes>
 
     </BrowserRouter>
+    </BudgetProvider>
   )
 }
 
